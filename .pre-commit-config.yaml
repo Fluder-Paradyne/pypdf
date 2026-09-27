@@ -1,4 +1,10 @@
 # pre-commit run --all-files
+
+# sample-files/ is a vendored copy of https://github.com/py-pdf/sample-files.
+# It is test data, not our source: keep the hooks (especially the whitespace/EOF
+# fixers and check-added-large-files) away from it.
+exclude: ^sample-files/
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0

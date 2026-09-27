@@ -21,21 +21,20 @@ pip install -r requirements/dev.txt
 
 See [testing pypdf with pytest](testing.md).
 
-## The sample-files git submodule
-The reason for having the submodule `sample-files` is that we want to keep
-the size of the pypdf repository small while we also want to have an extensive
-test suite. Those two goals contradict each other.
+## The sample-files folder
+`sample-files` is a vendored copy of
+[py-pdf/sample-files](https://github.com/py-pdf/sample-files). It used to be a
+git submodule; it is now committed directly into this repository, so a plain
+`git clone` gives you everything the test suite needs -- no
+`git submodule update --init` step.
 
 The `resources` folder should contain a select set of core examples that cover
 most cases we typically want to test for. The `sample-files` might cover a lot
 more edge cases, the behavior we get when file sizes get bigger, different
 PDF producers.
 
-To get the sample-files folder, you need to execute:
-
-```
-git submodule update --init
-```
+To update the vendored copy, copy the new files in from the upstream repository
+and commit them like any other change.
 
 ## Tools: git and pre-commit
 

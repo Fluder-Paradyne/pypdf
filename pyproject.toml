@@ -80,7 +80,6 @@ exclude = [
     ".gitblame-ignore-revs",
     ".github/*",
     ".gitignore",
-    ".gitmodules",
     ".pre-commit-config.yaml",
     "docs/*",
     "make_release.py",

@@ -10,7 +10,7 @@ To run the tests, you need to install the CI (Continuous Integration) requiremen
 pypdf makes use of the following pytest markers:
 
 * `slow`: Tests that require more than 5 seconds.
-* `samples`: Tests that require [the `sample-files` git submodule](https://github.com/py-pdf/sample-files) to be initialized. As of October 2022, this is about 25 MB.
+* `samples`: Tests that use the files in the `sample-files` folder, a vendored copy of [py-pdf/sample-files](https://github.com/py-pdf/sample-files). These are committed to the repository, so no extra setup is required.
 * `enable_socket`: Tests that download PDF documents. They are stored locally and thus only need to be downloaded once. As of October 2022, this is about 200 MB.
   * To successfully run the tests, please download most of the documents beforehand: `python -c "from tests import download_test_pdfs; download_test_pdfs()"`
 
